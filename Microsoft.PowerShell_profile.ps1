@@ -1,8 +1,8 @@
 ### PowerShell Profile Refactor
 ### Version 1.03 - Refactored
 
-# Initial GitHub.com connectivity check with 1 second timeout
-$canConnectToGitHub = Test-Connection github.com -Count 1 -Quiet -TimeoutSeconds 1
+# Initial GitHub.com connectivity check 1 second timeout option is not working
+$canConnectToGitHub = Test-Connection github.com -Count 1 -Quiet
 
 # Import Modules and External Profiles
 # Ensure Terminal-Icons module is installed before importing
@@ -118,7 +118,7 @@ function uptime {
     }
 }
 
-function reload-profile {
+function Update-Profile {
     & $profile
 }
 
